@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{43E5E8D1-72C1-4E87-A1EE-759EE2475CF5}</ProjectGuid>
+    <RootNamespace>Graphics_template_1</RootNamespace>
+    <ProjectName>SilvanArcher</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);WIN32</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./include/gl</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies); glew32.lib; fmodex_vc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./lib/</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies); glew32.lib;  fmodex_vc.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./lib/</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Arrow.cpp" />
+    <ClCompile Include="Barrel.cpp" />
+    <ClCompile Include="BasicItem.cpp" />
+    <ClCompile Include="BasicMesh.cpp" />
+    <ClCompile Include="BigSpider.cpp" />
+    <ClCompile Include="CampFire.cpp" />
+    <ClCompile Include="ColourSequence.cpp" />
+    <ClCompile Include="DeadTree.cpp" />
+    <ClCompile Include="EndScreen.cpp" />
+    <ClCompile Include="EnemyProjectile.cpp" />
+    <ClCompile Include="FireArrow.cpp" />
+    <ClCompile Include="FireParticleEmitter.cpp" />
+    <ClCompile Include="Heart.cpp" />
+    <ClCompile Include="House.cpp" />
+    <ClCompile Include="IntroScreen.cpp" />
+    <ClCompile Include="KillerAnt.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="MaterialEffects.cpp" />
+    <ClCompile Include="MAudio.cpp" />
+    <ClCompile Include="MBouncingBall.cpp" />
+    <ClCompile Include="MBoundingBox.cpp" />
+    <ClCompile Include="MCollisionDetection.cpp" />
+    <ClCompile Include="MCrossFade.cpp" />
+    <ClCompile Include="MFaceVertexMesh.cpp" />
+    <ClCompile Include="MGLTexture.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_MBCS;%(PreprocessorDefinitions);WIN32;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Init.cpp" />
+    <ClCompile Include="MHeightMapTerrain.cpp" />
+    <ClCompile Include="MHighResolutionTimer.cpp" />
+    <ClCompile Include="MLightingEffects.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MCamera.cpp" />
+    <ClCompile Include="MModel_3DS.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_MBCS;%(PreprocessorDefinitions);WIN32;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_MBCS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Movement.cpp" />
+    <ClCompile Include="MSkyBox.cpp" />
+    <ClCompile Include="MTerrain.cpp" />
+    <ClCompile Include="MText.cpp" />
+    <ClCompile Include="MTexture.cpp" />
+    <ClCompile Include="MSecondaryObjects.cpp" />
+    <ClCompile Include="MVertex.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="Pillar.cpp" />
+    <ClCompile Include="SpriteExplosion.cpp" />
+    <ClCompile Include="TeePee.cpp" />
+    <ClCompile Include="Tree.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Arrow.h" />
+    <ClInclude Include="Barrel.h" />
+    <ClInclude Include="BasicItem.h" />
+    <ClInclude Include="BasicMesh.h" />
+    <ClInclude Include="BigSpider.h" />
+    <ClInclude Include="CampFire.h" />
+    <ClInclude Include="ColourSequence.h" />
+    <ClInclude Include="DeadTree.h" />
+    <ClInclude Include="EndScreen.h" />
+    <ClInclude Include="EnemyProjectile.h" />
+    <ClInclude Include="FireArrow.h" />
+    <ClInclude Include="FireParticleEmitter.h" />
+    <ClInclude Include="Heart.h" />
+    <ClInclude Include="House.h" />
+    <ClInclude Include="IntroScreen.h" />
+    <ClInclude Include="KillerAnt.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="MaterialEffects.h" />
+    <ClInclude Include="MAudio.h" />
+    <ClInclude Include="MBouncingBall.h" />
+    <ClInclude Include="MBoundingBox.h" />
+    <ClInclude Include="MCollisionDetection.h" />
+    <ClInclude Include="MCrossFade.h" />
+    <ClInclude Include="MFaceVertexMesh.h" />
+    <ClInclude Include="MGLTexture.h" />
+    <ClInclude Include="MHeightMapTerrain.h" />
+    <ClInclude Include="MHighResolutionTimer.h" />
+    <ClInclude Include="MLightingEffects.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="MCamera.h" />
+    <ClInclude Include="MModel_3DS.h" />
+    <ClInclude Include="Movement.h" />
+    <ClInclude Include="MSkyBox.h" />
+    <ClInclude Include="MTerrain.h" />
+    <ClInclude Include="MText.h" />
+    <ClInclude Include="MTexture.h" />
+    <ClInclude Include="MVector3f.h" />
+    <ClInclude Include="MSecondaryObjects.h" />
+    <ClInclude Include="MTimer.h" />
+    <ClInclude Include="MVertex.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="Pillar.h" />
+    <ClInclude Include="SpriteExplosion.h" />
+    <ClInclude Include="TeePee.h" />
+    <ClInclude Include="Tree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\GLAUX.LIB" />
+    <Library Include="lib\GLU32.LIB" />
+    <Library Include="lib\glut32.lib" />
+    <Library Include="lib\OpenGL32.Lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
